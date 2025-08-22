@@ -1,23 +1,13 @@
-<macro name="switchbot-bot-push-wnr" icon="PLAY">
+<macro name="switchbot-bot-push-simple" icon="PLAY">
   <assert-service uuid="cba20d00-224d-11e6-9fb8-0002a5d5c51b">
     <assert-characteristic uuid="cba20002-224d-11e6-9fb8-0002a5d5c51b">
-      <property name="WRITE_NO_RESPONSE" requirement="MANDATORY"/>
-    </assert-characteristic>
-    <assert-characteristic uuid="cba20003-224d-11e6-9fb8-0002a5d5c51b">
-      <property name="NOTIFY" requirement="MANDATORY"/>
-      <assert-cccd/>
+      <property name="WRITE" requirement="MANDATORY"/>
     </assert-characteristic>
   </assert-service>
-
-  <write-descriptor
-    service-uuid="cba20d00-224d-11e6-9fb8-0002a5d5c51b"
-    characteristic-uuid="cba20003-224d-11e6-9fb8-0002a5d5c51b"
-    uuid="00002902-0000-1000-8000-00805f9b34fb"
-    value="0100"/>
 
   <write
     service-uuid="cba20d00-224d-11e6-9fb8-0002a5d5c51b"
     characteristic-uuid="cba20002-224d-11e6-9fb8-0002a5d5c51b"
-    value="570101"
-    type="WRITE_WITHOUT_RESPONSE"/>
+    value="570100"
+    type="WRITE_REQUEST"/>
 </macro>
